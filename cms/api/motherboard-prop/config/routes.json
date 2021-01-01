@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/motherboard-props",
+      "handler": "motherboard-prop.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/motherboard-props/count",
+      "handler": "motherboard-prop.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/motherboard-props/:id",
+      "handler": "motherboard-prop.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/motherboard-props",
+      "handler": "motherboard-prop.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/motherboard-props/:id",
+      "handler": "motherboard-prop.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/motherboard-props/:id",
+      "handler": "motherboard-prop.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

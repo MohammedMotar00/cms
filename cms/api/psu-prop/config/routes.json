@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/psu-props",
+      "handler": "psu-prop.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/psu-props/count",
+      "handler": "psu-prop.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/psu-props/:id",
+      "handler": "psu-prop.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/psu-props",
+      "handler": "psu-prop.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/psu-props/:id",
+      "handler": "psu-prop.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/psu-props/:id",
+      "handler": "psu-prop.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

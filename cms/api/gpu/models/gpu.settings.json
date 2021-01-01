@@ -1,0 +1,55 @@
+{
+  "kind": "collectionType",
+  "collectionName": "gpus",
+  "info": {
+    "name": "GPU",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true,
+      "unique": true
+    },
+    "description": {
+      "type": "richtext"
+    },
+    "image": {
+      "collection": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false
+    },
+    "description1": {
+      "type": "richtext"
+    },
+    "description2": {
+      "type": "richtext"
+    },
+    "description3": {
+      "type": "richtext"
+    },
+    "desc1": {
+      "type": "string"
+    },
+    "desc2": {
+      "type": "string"
+    },
+    "desc3": {
+      "type": "string"
+    },
+    "gpu_props": {
+      "collection": "gpu-prop"
+    }
+  }
+}

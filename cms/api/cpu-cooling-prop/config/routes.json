@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/cpu-cooling-props",
+      "handler": "cpu-cooling-prop.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/cpu-cooling-props/count",
+      "handler": "cpu-cooling-prop.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/cpu-cooling-props/:id",
+      "handler": "cpu-cooling-prop.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/cpu-cooling-props",
+      "handler": "cpu-cooling-prop.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/cpu-cooling-props/:id",
+      "handler": "cpu-cooling-prop.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/cpu-cooling-props/:id",
+      "handler": "cpu-cooling-prop.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

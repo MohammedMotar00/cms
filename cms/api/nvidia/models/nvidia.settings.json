@@ -1,0 +1,17 @@
+{
+  "kind": "collectionType",
+  "collectionName": "nvidias",
+  "info": {
+    "name": "nvidia"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "gpus": {
+      "collection": "gpu"
+    }
+  }
+}

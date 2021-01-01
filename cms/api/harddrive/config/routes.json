@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/harddrives",
+      "handler": "harddrive.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/harddrives/count",
+      "handler": "harddrive.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/harddrives/:id",
+      "handler": "harddrive.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/harddrives",
+      "handler": "harddrive.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/harddrives/:id",
+      "handler": "harddrive.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/harddrives/:id",
+      "handler": "harddrive.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

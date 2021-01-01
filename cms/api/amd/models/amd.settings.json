@@ -1,0 +1,17 @@
+{
+  "kind": "collectionType",
+  "collectionName": "amds",
+  "info": {
+    "name": "amd"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "gpus": {
+      "collection": "gpu"
+    }
+  }
+}

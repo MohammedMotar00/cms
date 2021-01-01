@@ -1,0 +1,33 @@
+{
+  "kind": "collectionType",
+  "collectionName": "chassi_props",
+  "info": {
+    "name": "chassi-prop"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "prop1": {
+      "type": "string"
+    },
+    "prop2": {
+      "type": "string"
+    },
+    "prop3": {
+      "type": "string"
+    },
+    "prop4": {
+      "type": "string"
+    },
+    "prop5": {
+      "type": "string"
+    }
+  }
+}

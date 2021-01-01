@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/gpu-props",
+      "handler": "gpu-prop.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/gpu-props/count",
+      "handler": "gpu-prop.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/gpu-props/:id",
+      "handler": "gpu-prop.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/gpu-props",
+      "handler": "gpu-prop.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/gpu-props/:id",
+      "handler": "gpu-prop.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/gpu-props/:id",
+      "handler": "gpu-prop.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

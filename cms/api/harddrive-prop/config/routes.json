@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/harddrive-props",
+      "handler": "harddrive-prop.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/harddrive-props/count",
+      "handler": "harddrive-prop.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/harddrive-props/:id",
+      "handler": "harddrive-prop.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/harddrive-props",
+      "handler": "harddrive-prop.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/harddrive-props/:id",
+      "handler": "harddrive-prop.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/harddrive-props/:id",
+      "handler": "harddrive-prop.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

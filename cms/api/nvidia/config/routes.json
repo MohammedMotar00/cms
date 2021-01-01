@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/nvidias",
+      "handler": "nvidia.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/nvidias/count",
+      "handler": "nvidia.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/nvidias/:id",
+      "handler": "nvidia.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/nvidias",
+      "handler": "nvidia.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/nvidias/:id",
+      "handler": "nvidia.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/nvidias/:id",
+      "handler": "nvidia.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}
