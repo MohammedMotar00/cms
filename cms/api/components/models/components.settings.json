@@ -1,0 +1,38 @@
+{
+  "kind": "collectionType",
+  "collectionName": "components",
+  "info": {
+    "name": "components"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "gpus": {
+      "collection": "gpu"
+    },
+    "chassis": {
+      "collection": "chassi"
+    },
+    "cpus": {
+      "collection": "cpu"
+    },
+    "cpu_coolings": {
+      "collection": "cpu-cooling"
+    },
+    "harddrives": {
+      "collection": "harddrive"
+    },
+    "motherboards": {
+      "collection": "motherboard"
+    },
+    "psus": {
+      "collection": "psu"
+    },
+    "rams": {
+      "collection": "ram"
+    }
+  }
+}
