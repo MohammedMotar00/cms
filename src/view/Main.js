@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import PropTypes from "prop-types";
 import AppBar from "@material-ui/core/AppBar";
 import CssBaseline from "@material-ui/core/CssBaseline";
@@ -6,16 +6,15 @@ import Divider from "@material-ui/core/Divider";
 import Drawer from "@material-ui/core/Drawer";
 import Hidden from "@material-ui/core/Hidden";
 import IconButton from "@material-ui/core/IconButton";
-import InboxIcon from "@material-ui/icons/MoveToInbox";
 import List from "@material-ui/core/List";
 import ListItem from "@material-ui/core/ListItem";
-import ListItemIcon from "@material-ui/core/ListItemIcon";
 import ListItemText from "@material-ui/core/ListItemText";
-import MailIcon from "@material-ui/icons/Mail";
 import MenuIcon from "@material-ui/icons/Menu";
 import Toolbar from "@material-ui/core/Toolbar";
 import Typography from "@material-ui/core/Typography";
 import { makeStyles, useTheme } from "@material-ui/core/styles";
+
+import Fetch from "../components/Fetch";
 
 import gpu_icon from "../icons/graphics-card.png";
 import ram_icon from "../icons/ram.png";
@@ -65,7 +64,8 @@ function ResponsiveDrawer(props) {
   const { window } = props;
   const classes = useStyles();
   const theme = useTheme();
-  const [mobileOpen, setMobileOpen] = React.useState(false);
+  const [mobileOpen, setMobileOpen] = useState(false);
+  const [fetchUrl, setFetchUrl] = useState(null);
 
   const handleDrawerToggle = () => {
     setMobileOpen(!mobileOpen);
@@ -74,19 +74,38 @@ function ResponsiveDrawer(props) {
   const drawer = (
     <div>
       <div className={classes.toolbar} />
+      <ListItem button>
+        <ListItemText primary="Datorkomponenter" />
+      </ListItem>
       <Divider />
       <List>
         {[
-          { component: "Grafikkort", icon: gpu_icon },
-          { component: "RAM-minne", icon: ram_icon },
-          { component: "Processor", icon: cpu_icon },
-          { component: "Moderskort", icon: motherboard_icon },
-          { component: "Hårddisk", icon: harddrive_icon },
-          { component: "Datorchassi", icon: case_icon },
-          { component: "Nätaggregat", icon: psu_icon },
-          { component: "Kylning", icon: cooling_icon },
+          { component: "Grafikkort", icon: gpu_icon, fetchUrl: "gpus" },
+          { component: "RAM-minne", icon: ram_icon, fetchUrl: "rams" },
+          { component: "Processor", icon: cpu_icon, fetchUrl: "cpus" },
+          {
+            component: "Moderskort",
+            icon: motherboard_icon,
+            fetchUrl: "motherboards",
+          },
+          {
+            component: "Hårddisk",
+            icon: harddrive_icon,
+            fetchUrl: "harddrives",
+          },
+          { component: "Datorchassi", icon: case_icon, fetchUrl: "chassis" },
+          { component: "Nätaggregat", icon: psu_icon, fetchUrl: "psus" },
+          {
+            component: "Kylning",
+            icon: cooling_icon,
+            fetchUrl: "cpu-coolings",
+          },
         ].map((pc) => (
-          <ListItem button key={pc}>
+          <ListItem
+            button
+            key={pc.component}
+            onClick={() => setFetchUrl(pc.fetchUrl)}
+          >
             <ListItemText primary={pc.component} />
             <img src={pc.icon} alt={pc.component} />
           </ListItem>
@@ -114,11 +133,10 @@ function ResponsiveDrawer(props) {
             <MenuIcon />
           </IconButton>
           <Typography variant="h6" noWrap>
-            Dator komponenter
+            Datorkomponenter
           </Typography>
         </Toolbar>
       </AppBar>
-
       <nav className={classes.drawer}>
         {/* The implementation can be swapped with js to avoid SEO duplication of links. */}
         <Hidden smUp implementation="css">
@@ -150,22 +168,17 @@ function ResponsiveDrawer(props) {
           </Drawer>
         </Hidden>
       </nav>
-
       <main className={classes.content}>
         <div className={classes.toolbar} />
-        <Typography paragraph>
-          här inne ska jag rendera korten / komponenterna!......
-        </Typography>
+        {/* <Typography paragraph> */}
+        <Fetch fetchUrl={fetchUrl} />
+        {/* </Typography> */}
       </main>
     </div>
   );
 }
 
 ResponsiveDrawer.propTypes = {
-  /**
-   * Injected by the documentation to work in an iframe.
-   * You won't need it on your project.
-   */
   window: PropTypes.func,
 };
 
