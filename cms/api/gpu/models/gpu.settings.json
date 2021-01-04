@@ -50,6 +50,10 @@
     },
     "gpu_props": {
       "collection": "gpu-prop"
+    },
+    "amds": {
+      "via": "gpuses",
+      "collection": "amd"
     }
   }
 }
