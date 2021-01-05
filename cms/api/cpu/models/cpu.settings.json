@@ -49,6 +49,12 @@
     },
     "cpu_props": {
       "collection": "cpu-prop"
+    },
+    "slug": {
+      "type": "string"
+    },
+    "category": {
+      "type": "string"
     }
   }
 }

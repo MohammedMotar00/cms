@@ -49,6 +49,12 @@
     },
     "chassi_props": {
       "collection": "chassi-prop"
+    },
+    "slug": {
+      "type": "string"
+    },
+    "category": {
+      "type": "string"
     }
   }
 }

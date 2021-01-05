@@ -49,6 +49,12 @@
     },
     "psu_props": {
       "collection": "psu-prop"
+    },
+    "slug": {
+      "type": "string"
+    },
+    "category": {
+      "type": "string"
     }
   }
 }

@@ -49,6 +49,12 @@
     },
     "harddrive_props": {
       "collection": "harddrive-prop"
+    },
+    "slug": {
+      "type": "string"
+    },
+    "category": {
+      "type": "string"
     }
   }
 }

@@ -52,8 +52,14 @@
       "collection": "gpu-prop"
     },
     "amds": {
-      "via": "gpuses",
-      "collection": "amd"
+      "collection": "amd",
+      "via": "gpuses"
+    },
+    "slug": {
+      "type": "string"
+    },
+    "category": {
+      "type": "string"
     }
   }
 }

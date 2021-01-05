@@ -12,8 +12,8 @@
   },
   "attributes": {
     "gpuses": {
-      "collection": "gpu",
       "via": "amds",
+      "collection": "gpu",
       "dominant": true
     }
   }

@@ -49,6 +49,12 @@
     },
     "cpu_cooling_props": {
       "collection": "cpu-cooling-prop"
+    },
+    "slug": {
+      "type": "string"
+    },
+    "category": {
+      "type": "string"
     }
   }
 }

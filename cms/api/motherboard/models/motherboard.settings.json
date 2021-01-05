@@ -49,6 +49,12 @@
     },
     "motherboard_props": {
       "collection": "motherboard-prop"
+    },
+    "slug": {
+      "type": "string"
+    },
+    "category": {
+      "type": "string"
     }
   }
 }

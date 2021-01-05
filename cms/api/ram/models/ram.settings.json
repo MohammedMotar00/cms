@@ -49,6 +49,12 @@
     },
     "description3": {
       "type": "richtext"
+    },
+    "slug": {
+      "type": "string"
+    },
+    "category": {
+      "type": "string"
     }
   }
 }
