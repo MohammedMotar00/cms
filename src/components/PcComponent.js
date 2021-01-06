@@ -1,9 +1,16 @@
 import React, { useState, useEffect } from "react";
 
-import CssBaseline from "@material-ui/core/CssBaseline";
+import { makeStyles } from "@material-ui/core/styles";
+import Card from "@material-ui/core/Card";
+import CardActionArea from "@material-ui/core/CardActionArea";
+import CardActions from "@material-ui/core/CardActions";
+import CardContent from "@material-ui/core/CardContent";
+import CardMedia from "@material-ui/core/CardMedia";
+import Button from "@material-ui/core/Button";
 import Typography from "@material-ui/core/Typography";
-import Container from "@material-ui/core/Container";
-import { Grid } from "@material-ui/core";
+import styling from "./styling";
+
+const URL = "http://localhost:1337";
 
 function PcComponent({
   name,
@@ -19,18 +26,47 @@ function PcComponent({
   desc3,
   id,
 }) {
-  console.log(id);
+  const classes = styling();
+  const smallImg = image[0]?.formats?.small?.url;
+  const thumbnail = image[0]?.formats?.thumbnail?.url;
+
   return (
-    <React.Fragment>
-      <Grid>s</Grid>
-      {/* <CssBaseline />
-      <Container disableGutters maxWidth={false}>
-        <Typography
-          component="div"
-          style={{ backgroundColor: "#cfe8fc", height: "100vh" }}
+    <Card className={classes.card}>
+      <CardActionArea>
+        <CardMedia
+          component="img"
+          alt={name}
+          height="140"
+          image={
+            smallImg !== undefined ? `${URL}${smallImg}` : `${URL}${thumbnail}`
+          }
+          title={name}
+          style={{ objectFit: "fit" }}
         />
-      </Container> */}
-    </React.Fragment>
+        <CardContent>
+          <Typography gutterBottom variant="h5" component="h2">
+            Lizard
+          </Typography>
+          <Typography variant="body2" color="textSecondary" component="p">
+            Lizards are a widespread group of squamate reptiles, with over 6,000
+            species, ranging across all continents except Antarctica
+          </Typography>
+        </CardContent>
+      </CardActionArea>
+      <CardActions
+        style={{
+          display: "flex",
+          flexDirection: "column",
+          justifyContent: "end",
+          // background: "red",
+          border: "1px solid red",
+        }}
+      >
+        <Button size="large" color="primary" style={{ flex: 1 }}>
+          Share
+        </Button>
+      </CardActions>
+    </Card>
   );
 }
 

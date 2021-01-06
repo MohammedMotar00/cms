@@ -14,4 +14,8 @@ export default makeStyles((theme) => ({
     display: "flex",
     justifyContent: "center",
   },
+
+  card: {
+    maxWidth: 345,
+  },
 }));
