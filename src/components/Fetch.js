@@ -85,6 +85,7 @@ function Fetch({ fetchUrl }) {
     // </main>
     <main className={classes.content}>
       {/* <div className={classes.toolbar} /> */}
+      {data?.map((x) => console.log(x))}
       <Grid container spacing={4} style={{ border: "1px solid blue" }}>
         {data?.map((pc) => (
           <Grid

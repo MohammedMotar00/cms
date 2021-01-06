@@ -8,6 +8,13 @@ import CardContent from "@material-ui/core/CardContent";
 import CardMedia from "@material-ui/core/CardMedia";
 import Button from "@material-ui/core/Button";
 import Typography from "@material-ui/core/Typography";
+import List from "@material-ui/core/List";
+import ListItem from "@material-ui/core/ListItem";
+import ListItemAvatar from "@material-ui/core/ListItemAvatar";
+import ListItemText from "@material-ui/core/ListItemText";
+import Avatar from "@material-ui/core/Avatar";
+import Grid from "@material-ui/core/Grid";
+
 import styling from "./styling";
 
 const URL = "http://localhost:1337";
@@ -44,13 +51,27 @@ function PcComponent({
           style={{ objectFit: "fit" }}
         />
         <CardContent>
-          <Typography gutterBottom variant="h5" component="h2">
-            Lizard
+          <Typography gutterBottom variant="p" component="h3">
+            {name}
           </Typography>
-          <Typography variant="body2" color="textSecondary" component="p">
+
+          {/* <Typography variant="body2" color="textSecondary" component="p">
             Lizards are a widespread group of squamate reptiles, with over 6,000
             species, ranging across all continents except Antarctica
-          </Typography>
+          </Typography> */}
+          <List style={{ display: "flex", justifyContent: "flex-start" }}>
+            <ListItem
+              style={{
+                flexDirection: "column",
+                justifyContent: "start",
+                border: "1px solid blue",
+              }}
+            >
+              <ListItemText primary="Single-line item" />
+              <ListItemText primary="Single-line item" />
+              <ListItemText primary="Single-line item" />
+            </ListItem>
+          </List>
         </CardContent>
       </CardActionArea>
       <CardActions

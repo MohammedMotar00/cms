@@ -11,10 +11,8 @@
     "draftAndPublish": true
   },
   "attributes": {
-    "gpuses": {
-      "via": "amds",
-      "collection": "gpu",
-      "dominant": true
+    "gpus": {
+      "collection": "gpu"
     }
   }
 }
