@@ -2,10 +2,6 @@ import React, { useState, useEffect } from "react";
 import axios from "../axios";
 import PcComponent from "./PcComponent";
 
-import CssBaseline from "@material-ui/core/CssBaseline";
-import Typography from "@material-ui/core/Typography";
-import Container from "@material-ui/core/Container";
-
 import styling from "./styling";
 import { Grid } from "@material-ui/core";
 
@@ -56,36 +52,9 @@ function Fetch({ fetchUrl }) {
   }, [fetchUrl]);
 
   return (
-    // <>
-    // <main className={classes.content}>
-    //   <CssBaseline />
-    //   <Container disableGutters maxWidth={false}>
-    //     <Typography
-    //       component="div"
-    //       style={{ backgroundColor: "#cfe8fc", height: "100vh" }}
-    //     >
-    //       {data?.map((pc) => (
-    //         <PcComponent
-    //           name={pc.name}
-    //           category={pc.category}
-    //           slug={pc.slug}
-    //           image={pc.image}
-    //           description={pc.description}
-    //           description1={pc.description1}
-    //           description2={pc.descriptio2}
-    //           description3={pc.descriptio3}
-    //           desc1={pc.desc1}
-    //           desc2={pc.desc2}
-    //           desc3={pc.desc3}
-    //           id={pc.id}
-    //         />
-    //       ))}
-    //     </Typography>
-    //   </Container>
-    // </main>
     <main className={classes.content}>
       {/* <div className={classes.toolbar} /> */}
-      {data?.map((x) => console.log(x))}
+      {/* {data?.map((x) => console.log(x))} */}
       <Grid container spacing={4} style={{ border: "1px solid blue" }}>
         {data?.map((pc) => (
           <Grid

@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react";
 
-import { makeStyles } from "@material-ui/core/styles";
 import Card from "@material-ui/core/Card";
 import CardActionArea from "@material-ui/core/CardActionArea";
 import CardActions from "@material-ui/core/CardActions";
@@ -10,15 +9,11 @@ import Button from "@material-ui/core/Button";
 import Typography from "@material-ui/core/Typography";
 import List from "@material-ui/core/List";
 import ListItem from "@material-ui/core/ListItem";
-import ListItemAvatar from "@material-ui/core/ListItemAvatar";
 import ListItemText from "@material-ui/core/ListItemText";
-import Avatar from "@material-ui/core/Avatar";
-import Grid from "@material-ui/core/Grid";
 
 import { Link } from "react-router-dom";
 
 import styling from "./styling";
-import ComponentPage from "../view/ComponentPage";
 
 const URL = "http://localhost:1337";
 
@@ -45,70 +40,84 @@ function PcComponent({
 
   return (
     <Card className={classes.card}>
-      <CardActionArea
-        style={{
-          height: "100%",
-          flexDirection: "column",
+      <Link
+        style={{ textDecoration: "none", color: "black" }}
+        to={{
+          pathname: `/component/${category}`,
+          state: {
+            slug: slug,
+            category: category,
+            id: id,
+          },
         }}
       >
-        <CardMedia
-          component="img"
-          alt={name}
-          // height="30%"
-          image={
-            smallImg !== undefined ? `${URL}${smallImg}` : `${URL}${thumbnail}`
-          }
-          title={name}
-          style={{ height: "250px", objectFit: "contain" }}
-        />
-        <CardContent>
-          <Typography
-            gutterBottom
-            variant="p"
-            component="h2"
-            style={{ textAlign: "center" }}
-          >
-            {name}
-          </Typography>
+        <CardActionArea
+          style={{
+            height: "100%",
+            flexDirection: "column",
+          }}
+        >
+          <CardMedia
+            component="img"
+            alt={name}
+            image={
+              smallImg !== undefined
+                ? `${URL}${smallImg}`
+                : `${URL}${thumbnail}`
+            }
+            title={name}
+            style={{ height: "250px", objectFit: "contain" }}
+          />
+          <CardContent>
+            <Typography
+              gutterBottom
+              variant="h6"
+              component="h3"
+              style={{ textAlign: "center" }}
+            >
+              {name}
+            </Typography>
 
-          <List
-            style={{
-              display: "flex",
-              justifyContent: "flex-start",
-              fontSize: "5px",
-            }}
-          >
-            <ListItem
+            <List
               style={{
                 display: "flex",
-                flexDirection: "column",
-                alignItems: "flex-start",
-                border: "1px solid blue",
-                flex: 1,
+                justifyContent: "flex-start",
+                fontSize: "5px",
               }}
             >
-              <ListItemText
-                disableTypography
-                primary={
-                  <Typography className={classes.font}>{prop1}</Typography>
-                }
-              />
-              <ListItemText
-                disableTypography
-                primary={
-                  <Typography className={classes.font}>{prop2}</Typography>
-                }
-              />
-              <ListItemText
-                disableTypography
-                primary={
-                  <Typography className={classes.font}>{prop3}</Typography>
-                }
-              />
-            </ListItem>
-          </List>
-        </CardContent>
-      </CardActionArea>
+              <ListItem
+                style={{
+                  display: "flex",
+                  flexDirection: "column",
+                  alignItems: "flex-start",
+                  border: "1px solid blue",
+                  flex: 1,
+                }}
+              >
+                <ListItemText
+                  disableTypography
+                  primary={
+                    <Typography className={classes.font}>{prop1}</Typography>
+                  }
+                />
+                <ListItemText
+                  disableTypography
+                  primary={
+                    <Typography className={classes.font}>{prop2}</Typography>
+                  }
+                />
+                <ListItemText
+                  disableTypography
+                  primary={
+                    <Typography className={classes.font}>{prop3}</Typography>
+                  }
+                />
+              </ListItem>
+            </List>
+          </CardContent>
+        </CardActionArea>
+      </Link>
+
       <CardActions
         style={{
           border: "1px solid red",
@@ -121,6 +130,8 @@ function PcComponent({
               pathname: "/component",
               state: {
                 name: name,
+                slug: slug,
+                category: category,
                 id: id,
               },
             }}

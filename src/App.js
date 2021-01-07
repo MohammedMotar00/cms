@@ -8,7 +8,7 @@ function App() {
     <div className="app">
       <Router>
         <Route exact path="/" component={Main} />
-        <Route path="/component" component={ComponentPage} />
+        <Route path="/component/:category" component={ComponentPage} />
         {/* <Route
           path="/component"
           render={(props) => <ComponentPage id={props.match.params.id} />}
