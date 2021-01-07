@@ -56,6 +56,15 @@
     },
     "category": {
       "type": "string"
+    },
+    "prop1": {
+      "type": "string"
+    },
+    "prop2": {
+      "type": "string"
+    },
+    "prop3": {
+      "type": "string"
     }
   }
 }
