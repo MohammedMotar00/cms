@@ -109,6 +109,9 @@ function Fetch({ fetchUrl }) {
               desc1={pc.desc1}
               desc2={pc.desc2}
               desc3={pc.desc3}
+              prop1={pc.prop1}
+              prop2={pc.prop2}
+              prop3={pc.prop3}
               id={pc.id}
             />
           </Grid>

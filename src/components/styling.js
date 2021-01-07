@@ -17,5 +17,13 @@ export default makeStyles((theme) => ({
 
   card: {
     maxWidth: 345,
+    border: " 1px solid green",
+    display: "flex",
+    flexDirection: "column",
+    justifyContent: "space-between",
+  },
+
+  font: {
+    fontSize: "16px",
   },
 }));

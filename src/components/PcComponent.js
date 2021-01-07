@@ -15,7 +15,10 @@ import ListItemText from "@material-ui/core/ListItemText";
 import Avatar from "@material-ui/core/Avatar";
 import Grid from "@material-ui/core/Grid";
 
+import { Link } from "react-router-dom";
+
 import styling from "./styling";
+import ComponentPage from "../view/ComponentPage";
 
 const URL = "http://localhost:1337";
 
@@ -31,6 +34,9 @@ function PcComponent({
   desc1,
   desc2,
   desc3,
+  prop1,
+  prop2,
+  prop3,
   id,
 }) {
   const classes = styling();
@@ -39,52 +45,88 @@ function PcComponent({
 
   return (
     <Card className={classes.card}>
-      <CardActionArea>
+      <CardActionArea
+        style={{
+          height: "100%",
+          flexDirection: "column",
+        }}
+      >
         <CardMedia
           component="img"
           alt={name}
-          height="140"
+          // height="30%"
           image={
             smallImg !== undefined ? `${URL}${smallImg}` : `${URL}${thumbnail}`
           }
           title={name}
-          style={{ objectFit: "fit" }}
+          style={{ height: "250px", objectFit: "contain" }}
         />
         <CardContent>
-          <Typography gutterBottom variant="p" component="h3">
+          <Typography
+            gutterBottom
+            variant="p"
+            component="h2"
+            style={{ textAlign: "center" }}
+          >
             {name}
           </Typography>
 
-          {/* <Typography variant="body2" color="textSecondary" component="p">
-            Lizards are a widespread group of squamate reptiles, with over 6,000
-            species, ranging across all continents except Antarctica
-          </Typography> */}
-          <List style={{ display: "flex", justifyContent: "flex-start" }}>
+          <List
+            style={{
+              display: "flex",
+              justifyContent: "flex-start",
+              fontSize: "5px",
+            }}
+          >
             <ListItem
               style={{
+                display: "flex",
                 flexDirection: "column",
-                justifyContent: "start",
+                alignItems: "flex-start",
                 border: "1px solid blue",
+                flex: 1,
               }}
             >
-              <ListItemText primary="Single-line item" />
-              <ListItemText primary="Single-line item" />
-              <ListItemText primary="Single-line item" />
+              <ListItemText
+                disableTypography
+                primary={
+                  <Typography className={classes.font}>{prop1}</Typography>
+                }
+              />
+              <ListItemText
+                disableTypography
+                primary={
+                  <Typography className={classes.font}>{prop2}</Typography>
+                }
+              />
+              <ListItemText
+                disableTypography
+                primary={
+                  <Typography className={classes.font}>{prop3}</Typography>
+                }
+              />
             </ListItem>
           </List>
         </CardContent>
       </CardActionArea>
       <CardActions
         style={{
-          display: "flex",
-          flexDirection: "column",
-          justifyContent: "end",
-          // background: "red",
           border: "1px solid red",
         }}
       >
         <Button size="large" color="primary" style={{ flex: 1 }}>
-          Share
+          {/* <Link to="/component" params={{  }}>Läs mer...</Link> */}
+          <Link
+            to={{
+              pathname: "/component",
+              state: {
+                name: name,
+                id: id,
+              },
+            }}
+          >
+            Läs mer...
+          </Link>
         </Button>
       </CardActions>
     </Card>
