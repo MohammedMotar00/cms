@@ -126,10 +126,10 @@ function PcComponent({
         <Button size="large" color="primary" style={{ flex: 1 }}>
           {/* <Link to="/component" params={{  }}>Läs mer...</Link> */}
           <Link
+            style={{ textDecoration: "none", color: "black" }}
             to={{
-              pathname: "/component",
+              pathname: `/component/${category}`,
               state: {
-                name: name,
                 slug: slug,
                 category: category,
                 id: id,

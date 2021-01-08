@@ -5,12 +5,26 @@ import PcComponent from "./PcComponent";
 import styling from "./styling";
 import { Grid } from "@material-ui/core";
 
+import { useLocation } from "react-router-dom";
+
 function Fetch({ fetchUrl }) {
   const [data, setData] = useState([]);
   // console.log(data);
+  const location = useLocation();
+  // const { url } = location.state;
+  // console.log(url);
   const classes = styling();
 
   useEffect(() => {
+    const slug = location.state;
+    if (slug !== undefined) {
+      console.log(slug);
+    }
+  }, []);
+
+  useEffect(() => {
+    // fetchUrl = slug;
+
     async function fetchData() {
       const request = await axios(fetchUrl ?? "components");
       // console.log(request?.config?.url);
@@ -55,7 +69,7 @@ function Fetch({ fetchUrl }) {
     <main className={classes.content}>
       {/* <div className={classes.toolbar} /> */}
       {/* {data?.map((x) => console.log(x))} */}
-      <Grid container spacing={4} style={{ border: "1px solid blue" }}>
+      <Grid container spacing={4}>
         {data?.map((pc) => (
           <Grid
             item

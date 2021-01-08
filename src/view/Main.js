@@ -75,7 +75,10 @@ function ResponsiveDrawer(props) {
     <div>
       <div className={classes.toolbar} />
       <ListItem button>
-        <ListItemText primary="Datorkomponenter" />
+        <ListItemText
+          primary="Datorkomponenter"
+          onClick={() => setFetchUrl("components")}
+        />
       </ListItem>
       <Divider />
       <List>
@@ -132,7 +135,11 @@ function ResponsiveDrawer(props) {
           >
             <MenuIcon />
           </IconButton>
-          <Typography variant="h6" noWrap>
+          <Typography
+            variant="button"
+            noWrap
+            // onClick={() => setFetchUrl("components")}
+          >
             Datorkomponenter
           </Typography>
         </Toolbar>
