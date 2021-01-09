@@ -65,7 +65,14 @@ function ResponsiveDrawer(props) {
   const classes = useStyles();
   const theme = useTheme();
   const [mobileOpen, setMobileOpen] = useState(false);
+  // let url = localStorage.getItem("url");
   const [fetchUrl, setFetchUrl] = useState(null);
+
+  if (fetchUrl) localStorage.setItem("url", fetchUrl);
+
+  console.log(fetchUrl);
+
+  // if (fetchUrl) console.log(localStorage.getItem("url"));
 
   const handleDrawerToggle = () => {
     setMobileOpen(!mobileOpen);

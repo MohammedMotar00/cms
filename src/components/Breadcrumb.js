@@ -7,18 +7,15 @@ function Breadcrumb({ category, slug }) {
   console.log(slug);
   return (
     <Breadcrumbs aria-label="breadcrumb">
-      <Link color="inherit" to="/">
+      <Link
+        color="inherit"
+        to="/"
+        onClick={() => localStorage.setItem("url", "components")}
+      >
         Komponenter
       </Link>
 
-      <Link
-        to={{
-          pathname: "/",
-          state: {
-            slug: slug,
-          },
-        }}
-      >
+      <Link onClick={() => localStorage.setItem("url", slug)} to="/">
         {category}
       </Link>
     </Breadcrumbs>

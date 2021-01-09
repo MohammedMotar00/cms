@@ -5,32 +5,28 @@ import PcComponent from "./PcComponent";
 import styling from "./styling";
 import { Grid } from "@material-ui/core";
 
-import { useLocation } from "react-router-dom";
-
 function Fetch({ fetchUrl }) {
   const [data, setData] = useState([]);
-  // console.log(data);
-  const location = useLocation();
-  // const { url } = location.state;
-  // console.log(url);
   const classes = styling();
 
-  useEffect(() => {
-    const slug = location.state;
-    if (slug !== undefined) {
-      console.log(slug);
+  const shuffleArray = (array) => {
+    for (let i = array.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      const temp = array[i];
+      array[i] = array[j];
+      array[j] = temp;
     }
-  }, []);
+
+    return array;
+  };
 
   useEffect(() => {
-    // fetchUrl = slug;
+    let url = localStorage.getItem("url");
 
     async function fetchData() {
-      const request = await axios(fetchUrl ?? "components");
-      // console.log(request?.config?.url);
+      const request = await axios(url ?? "components");
       if (request.config.url === "components") {
         const data = request?.data[0];
-        // console.log(data);
         let arrData = [];
         let arr = [];
 
@@ -53,7 +49,7 @@ function Fetch({ fetchUrl }) {
         data.psus.map((x) => x).map((x) => arr.push(x));
         data.rams.map((x) => x).map((x) => arr.push(x));
 
-        // console.log(arr);
+        shuffleArray(arr);
 
         setData(arr);
       } else {
