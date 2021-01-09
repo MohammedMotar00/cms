@@ -1,0 +1,29 @@
+{
+  "kind": "collectionType",
+  "collectionName": "gpu_specs",
+  "info": {
+    "name": "gpu-specs",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "gpu_specs_props_allmants": {
+      "collection": "gpu-specs-props-allmant",
+      "via": "gpu_specs",
+      "dominant": true
+    },
+    "gpu_specs_props_minnes": {
+      "collection": "gpu-specs-props-minne",
+      "via": "gpu_specs",
+      "dominant": true
+    }
+  }
+}

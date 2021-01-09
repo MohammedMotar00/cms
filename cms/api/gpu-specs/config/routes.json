@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/gpu-specs",
+      "handler": "gpu-specs.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/gpu-specs/count",
+      "handler": "gpu-specs.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/gpu-specs/:id",
+      "handler": "gpu-specs.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/gpu-specs",
+      "handler": "gpu-specs.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/gpu-specs/:id",
+      "handler": "gpu-specs.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/gpu-specs/:id",
+      "handler": "gpu-specs.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

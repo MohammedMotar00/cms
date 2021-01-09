@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/gpu-specs-props-allmants",
+      "handler": "gpu-specs-props-allmant.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/gpu-specs-props-allmants/count",
+      "handler": "gpu-specs-props-allmant.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/gpu-specs-props-allmants/:id",
+      "handler": "gpu-specs-props-allmant.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/gpu-specs-props-allmants",
+      "handler": "gpu-specs-props-allmant.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/gpu-specs-props-allmants/:id",
+      "handler": "gpu-specs-props-allmant.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/gpu-specs-props-allmants/:id",
+      "handler": "gpu-specs-props-allmant.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

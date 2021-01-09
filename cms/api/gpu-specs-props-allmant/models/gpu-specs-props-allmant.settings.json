@@ -1,0 +1,24 @@
+{
+  "kind": "collectionType",
+  "collectionName": "gpu_specs_props_allmants",
+  "info": {
+    "name": "Gpu-specs-props-allmant"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "type": {
+      "type": "string"
+    },
+    "value": {
+      "type": "string"
+    },
+    "gpu_specs": {
+      "via": "gpu_specs_props_allmants",
+      "collection": "gpu-specs"
+    }
+  }
+}

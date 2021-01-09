@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/gpu-specs-props-minnes",
+      "handler": "gpu-specs-props-minne.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/gpu-specs-props-minnes/count",
+      "handler": "gpu-specs-props-minne.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/gpu-specs-props-minnes/:id",
+      "handler": "gpu-specs-props-minne.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/gpu-specs-props-minnes",
+      "handler": "gpu-specs-props-minne.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/gpu-specs-props-minnes/:id",
+      "handler": "gpu-specs-props-minne.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/gpu-specs-props-minnes/:id",
+      "handler": "gpu-specs-props-minne.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

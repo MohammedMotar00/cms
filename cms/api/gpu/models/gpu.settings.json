@@ -65,6 +65,9 @@
     },
     "prop3": {
       "type": "string"
+    },
+    "gpu_spec": {
+      "model": "gpu-specs"
     }
   }
 }
