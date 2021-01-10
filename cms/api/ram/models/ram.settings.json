@@ -64,6 +64,9 @@
     },
     "prop3": {
       "type": "string"
+    },
+    "ram_spec": {
+      "model": "ram-specs"
     }
   }
 }

@@ -23,7 +23,7 @@ function ComponentPage() {
 
     async function fetchData() {
       const request = await axios(`${slug}/${id}`);
-      // console.log(request.data);
+      console.log(request.data);
 
       setData(request.data);
     }
@@ -68,6 +68,9 @@ function ComponentPage() {
           description2={data.description2}
           description3={data.description3}
           category={data.category}
+          slug={data.slug}
+          id={data.id}
+          data={data}
         />
         {/* </Grid> */}
       </Container>

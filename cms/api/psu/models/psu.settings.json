@@ -64,6 +64,9 @@
     },
     "prop3": {
       "type": "string"
+    },
+    "psu_spec": {
+      "model": "psu-specs"
     }
   }
 }

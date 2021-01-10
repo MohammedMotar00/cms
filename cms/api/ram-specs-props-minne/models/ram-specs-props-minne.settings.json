@@ -1,0 +1,24 @@
+{
+  "kind": "collectionType",
+  "collectionName": "ram_specs_props_minnes",
+  "info": {
+    "name": "ram-specs-props-minne"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "type": {
+      "type": "string"
+    },
+    "value": {
+      "type": "string"
+    },
+    "ram_specs": {
+      "via": "ram_specs_props_minnes",
+      "collection": "ram-specs"
+    }
+  }
+}

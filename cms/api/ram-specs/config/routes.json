@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/ram-specs",
+      "handler": "ram-specs.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/ram-specs/count",
+      "handler": "ram-specs.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/ram-specs/:id",
+      "handler": "ram-specs.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/ram-specs",
+      "handler": "ram-specs.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/ram-specs/:id",
+      "handler": "ram-specs.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/ram-specs/:id",
+      "handler": "ram-specs.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

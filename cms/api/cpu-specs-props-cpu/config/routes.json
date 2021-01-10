@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/cpu-specs-props-cpus",
+      "handler": "cpu-specs-props-cpu.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/cpu-specs-props-cpus/count",
+      "handler": "cpu-specs-props-cpu.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/cpu-specs-props-cpus/:id",
+      "handler": "cpu-specs-props-cpu.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/cpu-specs-props-cpus",
+      "handler": "cpu-specs-props-cpu.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/cpu-specs-props-cpus/:id",
+      "handler": "cpu-specs-props-cpu.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/cpu-specs-props-cpus/:id",
+      "handler": "cpu-specs-props-cpu.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

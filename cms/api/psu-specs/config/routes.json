@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/psu-specs",
+      "handler": "psu-specs.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/psu-specs/count",
+      "handler": "psu-specs.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/psu-specs/:id",
+      "handler": "psu-specs.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/psu-specs",
+      "handler": "psu-specs.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/psu-specs/:id",
+      "handler": "psu-specs.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/psu-specs/:id",
+      "handler": "psu-specs.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

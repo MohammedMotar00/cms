@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/cpu-specs",
+      "handler": "cpu-specs.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/cpu-specs/count",
+      "handler": "cpu-specs.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/cpu-specs/:id",
+      "handler": "cpu-specs.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/cpu-specs",
+      "handler": "cpu-specs.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/cpu-specs/:id",
+      "handler": "cpu-specs.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/cpu-specs/:id",
+      "handler": "cpu-specs.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/ram-specs-props-minnes",
+      "handler": "ram-specs-props-minne.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/ram-specs-props-minnes/count",
+      "handler": "ram-specs-props-minne.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/ram-specs-props-minnes/:id",
+      "handler": "ram-specs-props-minne.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/ram-specs-props-minnes",
+      "handler": "ram-specs-props-minne.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/ram-specs-props-minnes/:id",
+      "handler": "ram-specs-props-minne.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/ram-specs-props-minnes/:id",
+      "handler": "ram-specs-props-minne.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

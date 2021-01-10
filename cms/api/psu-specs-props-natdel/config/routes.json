@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/psu-specs-props-natdels",
+      "handler": "psu-specs-props-natdel.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/psu-specs-props-natdels/count",
+      "handler": "psu-specs-props-natdel.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/psu-specs-props-natdels/:id",
+      "handler": "psu-specs-props-natdel.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/psu-specs-props-natdels",
+      "handler": "psu-specs-props-natdel.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/psu-specs-props-natdels/:id",
+      "handler": "psu-specs-props-natdel.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/psu-specs-props-natdels/:id",
+      "handler": "psu-specs-props-natdel.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

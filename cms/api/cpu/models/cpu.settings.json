@@ -64,6 +64,9 @@
     },
     "prop3": {
       "type": "string"
+    },
+    "cpu_spec": {
+      "model": "cpu-specs"
     }
   }
 }

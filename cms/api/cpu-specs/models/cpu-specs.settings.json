@@ -1,0 +1,29 @@
+{
+  "kind": "collectionType",
+  "collectionName": "cpu_specs",
+  "info": {
+    "name": "cpu-specs",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "cpu_specs_props_allmants": {
+      "collection": "cpu-specs-props-allmant",
+      "via": "cpu_specs",
+      "dominant": true
+    },
+    "cpu_specs_props_cpus": {
+      "collection": "cpu-specs-props-cpu",
+      "via": "cpu_specs",
+      "dominant": true
+    }
+  }
+}

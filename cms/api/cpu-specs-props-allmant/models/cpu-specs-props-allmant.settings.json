@@ -1,0 +1,24 @@
+{
+  "kind": "collectionType",
+  "collectionName": "cpu_specs_props_allmants",
+  "info": {
+    "name": "cpu-specs-props-allmant"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "type": {
+      "type": "string"
+    },
+    "value": {
+      "type": "string"
+    },
+    "cpu_specs": {
+      "via": "cpu_specs_props_allmants",
+      "collection": "cpu-specs"
+    }
+  }
+}

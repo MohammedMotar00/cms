@@ -1,0 +1,29 @@
+{
+  "kind": "collectionType",
+  "collectionName": "ram_specs",
+  "info": {
+    "name": "ram-specs",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "ram_specs_props_allmants": {
+      "collection": "ram-specs-props-allmant",
+      "via": "ram_specs",
+      "dominant": true
+    },
+    "ram_specs_props_minnes": {
+      "collection": "ram-specs-props-minne",
+      "via": "ram_specs",
+      "dominant": true
+    }
+  }
+}

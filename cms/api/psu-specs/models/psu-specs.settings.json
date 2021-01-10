@@ -1,0 +1,29 @@
+{
+  "kind": "collectionType",
+  "collectionName": "psu_specs",
+  "info": {
+    "name": "psu-specs",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "psu_specs_props_allmants": {
+      "collection": "psu-specs-props-allmant",
+      "via": "psu_specs",
+      "dominant": true
+    },
+    "psu_specs_props_natdels": {
+      "collection": "psu-specs-props-natdel",
+      "via": "psu_specs",
+      "dominant": true
+    }
+  }
+}

@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/psu-specs-props-allmants",
+      "handler": "psu-specs-props-allmant.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/psu-specs-props-allmants/count",
+      "handler": "psu-specs-props-allmant.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/psu-specs-props-allmants/:id",
+      "handler": "psu-specs-props-allmant.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/psu-specs-props-allmants",
+      "handler": "psu-specs-props-allmant.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/psu-specs-props-allmants/:id",
+      "handler": "psu-specs-props-allmant.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/psu-specs-props-allmants/:id",
+      "handler": "psu-specs-props-allmant.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

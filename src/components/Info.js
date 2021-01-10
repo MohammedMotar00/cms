@@ -27,11 +27,14 @@ function Info({
   description2,
   description3,
   category,
+  slug,
+  id,
+  data,
 }) {
   const classes = useStyles();
   const [infoType, setInfoType] = useState("description");
   const [open, setOpen] = useState(false);
-  // console.log(infoType);
+  console.log(slug);
 
   const handleChange = (event) => {
     setInfoType(event.target.value);
@@ -93,7 +96,7 @@ function Info({
             description3={description3}
           />
         ) : (
-          <Specs />
+          <Specs category={category} data={data} />
         )}
       </Grid>
     </Container>
