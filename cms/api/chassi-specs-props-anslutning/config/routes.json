@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/chassi-specs-props-anslutnings",
+      "handler": "chassi-specs-props-anslutning.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/chassi-specs-props-anslutnings/count",
+      "handler": "chassi-specs-props-anslutning.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/chassi-specs-props-anslutnings/:id",
+      "handler": "chassi-specs-props-anslutning.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/chassi-specs-props-anslutnings",
+      "handler": "chassi-specs-props-anslutning.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/chassi-specs-props-anslutnings/:id",
+      "handler": "chassi-specs-props-anslutning.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/chassi-specs-props-anslutnings/:id",
+      "handler": "chassi-specs-props-anslutning.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

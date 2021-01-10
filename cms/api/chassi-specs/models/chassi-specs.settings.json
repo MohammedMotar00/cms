@@ -1,0 +1,29 @@
+{
+  "kind": "collectionType",
+  "collectionName": "chassi_specs",
+  "info": {
+    "name": "chassi-specs",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "chassi_specs_props_allmants": {
+      "collection": "chassi-specs-props-allmant",
+      "via": "chassi_specs",
+      "dominant": true
+    },
+    "chassi_specs_props_anslutnings": {
+      "collection": "chassi-specs-props-anslutning",
+      "via": "chassi_specs",
+      "dominant": true
+    }
+  }
+}

@@ -64,6 +64,9 @@
     },
     "prop3": {
       "type": "string"
+    },
+    "chassi_spec": {
+      "model": "chassi-specs"
     }
   }
 }

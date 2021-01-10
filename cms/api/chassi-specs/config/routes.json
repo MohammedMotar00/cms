@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/chassi-specs",
+      "handler": "chassi-specs.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/chassi-specs/count",
+      "handler": "chassi-specs.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/chassi-specs/:id",
+      "handler": "chassi-specs.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/chassi-specs",
+      "handler": "chassi-specs.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/chassi-specs/:id",
+      "handler": "chassi-specs.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/chassi-specs/:id",
+      "handler": "chassi-specs.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

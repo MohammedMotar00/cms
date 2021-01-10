@@ -9,7 +9,6 @@ import TableHead from "@material-ui/core/TableHead";
 import TableRow from "@material-ui/core/TableRow";
 import Paper from "@material-ui/core/Paper";
 import { Divider } from "@material-ui/core";
-const URL = "http://localhost:1337/cpu-specs/";
 
 const StyledTableCell = withStyles((theme) => ({
   head: {
@@ -38,36 +37,54 @@ const useStyles = makeStyles({
   },
 });
 
-function CpuSpecs({ id }) {
+function RenderSpecs({ URL, id, title1, title2, category }) {
   const classes = useStyles();
-  const [allmant, setAllmant] = useState([]);
-  const [cpu, setCpu] = useState([]);
+  const [data1, setData1] = useState([]);
+  const [data2, setData2] = useState([]);
 
   useEffect(() => {
     async function fetchData() {
       const request = await axios(`${URL}${id}`);
 
-      setAllmant(request.data.cpu_specs_props_allmants);
-      setCpu(request.data.cpu_specs_props_cpus);
+      if (category === "Grafikkort") {
+        setData1(request.data.gpu_specs_props_allmants);
+        setData2(request.data.gpu_specs_props_minnes);
+      }
+
+      if (category === "Processor") {
+        setData1(request.data.cpu_specs_props_allmants);
+        setData2(request.data.cpu_specs_props_cpus);
+      }
+
+      if (category === "Nätaggregat") {
+        setData1(request.data.psu_specs_props_allmants);
+        setData2(request.data.psu_specs_props_natdels);
+      }
+
+      if (category === "RAM-minne") {
+        setData1(request.data.ram_specs_props_allmants);
+        setData2(request.data.ram_specs_props_minnes);
+      }
     }
 
     fetchData();
-  }, [id]);
+  }, [category]);
 
-  console.log(id);
+  console.log(data1);
+  console.log(data2);
 
   return (
     <TableContainer component={Paper} style={{ marginBottom: "50px" }}>
       <Table className={classes.table} aria-label="customized table">
         <TableHead className={classes.width}>
           <TableRow>
-            <StyledTableCell>Allmänt</StyledTableCell>
+            <StyledTableCell>{title1}</StyledTableCell>
             <StyledTableCell></StyledTableCell>
           </TableRow>
         </TableHead>
 
         <TableBody>
-          {allmant.map((data) => (
+          {data1.map((data) => (
             <StyledTableRow key={data.type}>
               <StyledTableCell component="th" scope="row">
                 {data.type}
@@ -81,13 +98,13 @@ function CpuSpecs({ id }) {
 
         <TableHead className={classes.width}>
           <TableRow>
-            <StyledTableCell>Processor</StyledTableCell>
+            <StyledTableCell>{title2}</StyledTableCell>
             <StyledTableCell></StyledTableCell>
           </TableRow>
         </TableHead>
 
         <TableBody>
-          {cpu.map((data) => (
+          {data2.map((data) => (
             <StyledTableRow key={data.type}>
               <StyledTableCell component="th" scope="row">
                 {data.type}
@@ -102,4 +119,4 @@ function CpuSpecs({ id }) {
   );
 }
 
-export default CpuSpecs;
+export default RenderSpecs;

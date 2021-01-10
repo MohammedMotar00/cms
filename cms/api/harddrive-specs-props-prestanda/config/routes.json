@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/harddrive-specs-props-prestandas",
+      "handler": "harddrive-specs-props-prestanda.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/harddrive-specs-props-prestandas/count",
+      "handler": "harddrive-specs-props-prestanda.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/harddrive-specs-props-prestandas/:id",
+      "handler": "harddrive-specs-props-prestanda.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/harddrive-specs-props-prestandas",
+      "handler": "harddrive-specs-props-prestanda.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/harddrive-specs-props-prestandas/:id",
+      "handler": "harddrive-specs-props-prestanda.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/harddrive-specs-props-prestandas/:id",
+      "handler": "harddrive-specs-props-prestanda.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

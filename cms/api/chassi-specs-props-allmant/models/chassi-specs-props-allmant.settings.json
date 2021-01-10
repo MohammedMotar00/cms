@@ -1,0 +1,24 @@
+{
+  "kind": "collectionType",
+  "collectionName": "chassi_specs_props_allmants",
+  "info": {
+    "name": "chassi-specs-props-allmant"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "type": {
+      "type": "string"
+    },
+    "value": {
+      "type": "string"
+    },
+    "chassi_specs": {
+      "via": "chassi_specs_props_allmants",
+      "collection": "chassi-specs"
+    }
+  }
+}

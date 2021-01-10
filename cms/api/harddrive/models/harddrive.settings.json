@@ -64,6 +64,9 @@
     },
     "prop3": {
       "type": "string"
+    },
+    "harddrive_spec": {
+      "model": "harddrive-specs"
     }
   }
 }

@@ -1,0 +1,24 @@
+{
+  "kind": "collectionType",
+  "collectionName": "harddrive_specs_props_prestandas",
+  "info": {
+    "name": "Harddrive-specs-props-prestanda"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "type": {
+      "type": "string"
+    },
+    "value": {
+      "type": "string"
+    },
+    "harddrive_specs": {
+      "via": "harddrive_specs_props_prestandas",
+      "collection": "harddrive-specs"
+    }
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "kind": "collectionType",
+  "collectionName": "harddrive_specs_props_allmants",
+  "info": {
+    "name": "Harddrive-specs-props-allmant"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "type": {
+      "type": "string"
+    },
+    "value": {
+      "type": "string"
+    },
+    "harddrive_specs": {
+      "via": "harddrive_specs_props_allmants",
+      "collection": "harddrive-specs"
+    }
+  }
+}
