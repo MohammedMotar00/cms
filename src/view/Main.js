@@ -49,7 +49,6 @@ const useStyles = makeStyles((theme) => ({
       display: "none",
     },
   },
-  // necessary for content to be below app bar
   toolbar: theme.mixins.toolbar,
   drawerPaper: {
     width: drawerWidth,
@@ -137,17 +136,12 @@ function ResponsiveDrawer(props) {
           >
             <MenuIcon />
           </IconButton>
-          <Typography
-            variant="button"
-            noWrap
-            // onClick={() => setFetchUrl("components")}
-          >
+          <Typography variant="button" noWrap>
             Datorkomponenter
           </Typography>
         </Toolbar>
       </AppBar>
       <nav className={classes.drawer}>
-        {/* The implementation can be swapped with js to avoid SEO duplication of links. */}
         <Hidden smUp implementation="css">
           <Drawer
             container={container}
@@ -179,9 +173,7 @@ function ResponsiveDrawer(props) {
       </nav>
       <main className={classes.content}>
         <div className={classes.toolbar} />
-        {/* <Typography paragraph> */}
         <Fetch fetchUrl={fetchUrl} />
-        {/* </Typography> */}
       </main>
     </div>
   );

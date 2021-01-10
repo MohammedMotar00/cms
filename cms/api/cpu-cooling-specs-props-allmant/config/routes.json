@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/cpu-cooling-specs-props-allmants",
+      "handler": "cpu-cooling-specs-props-allmant.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/cpu-cooling-specs-props-allmants/count",
+      "handler": "cpu-cooling-specs-props-allmant.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/cpu-cooling-specs-props-allmants/:id",
+      "handler": "cpu-cooling-specs-props-allmant.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/cpu-cooling-specs-props-allmants",
+      "handler": "cpu-cooling-specs-props-allmant.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/cpu-cooling-specs-props-allmants/:id",
+      "handler": "cpu-cooling-specs-props-allmant.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/cpu-cooling-specs-props-allmants/:id",
+      "handler": "cpu-cooling-specs-props-allmant.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/cpu-cooling-specs",
+      "handler": "cpu-cooling-specs.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/cpu-cooling-specs/count",
+      "handler": "cpu-cooling-specs.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/cpu-cooling-specs/:id",
+      "handler": "cpu-cooling-specs.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/cpu-cooling-specs",
+      "handler": "cpu-cooling-specs.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/cpu-cooling-specs/:id",
+      "handler": "cpu-cooling-specs.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/cpu-cooling-specs/:id",
+      "handler": "cpu-cooling-specs.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

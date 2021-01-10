@@ -10,20 +10,27 @@ function Description({
   description2,
   description3,
 }) {
-  // console.log(description);
   return (
-    <Container>
+    <Container style={{ marginTop: "30px" }}>
       <Typography>{description}</Typography>
-      <Divider />
+
+      {description1 !== null && <Divider style={{ margin: "30px 0" }} />}
+
       <Typography style={{ fontWeight: "bold" }}>{desc1}</Typography>
+
       <Typography>{description1}</Typography>
-      <Divider />
+
+      {description2 !== null && <Divider style={{ margin: "30px 0" }} />}
+
       <Typography style={{ fontWeight: "bold" }}>{desc2}</Typography>
       <Typography>{description2}</Typography>
-      <Divider />
+
+      {description3 !== null && <Divider style={{ margin: "30px 0" }} />}
+
       <Typography style={{ fontWeight: "bold" }}>{desc3}</Typography>
       <Typography>{description3}</Typography>
-      <Divider />
+
+      <div style={{ margin: "100px 0" }} />
     </Container>
   );
 }

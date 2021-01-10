@@ -1,0 +1,29 @@
+{
+  "kind": "collectionType",
+  "collectionName": "cpu_cooling_specs",
+  "info": {
+    "name": "cpu-cooling-specs",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "cpu_cooling_specs_props_allmants": {
+      "collection": "cpu-cooling-specs-props-allmant",
+      "via": "cpu_cooling_specs",
+      "dominant": true
+    },
+    "cpu_cooling_specs_props_heats": {
+      "collection": "cpu-cooling-specs-props-heat",
+      "via": "cpu_cooling_specs",
+      "dominant": true
+    }
+  }
+}

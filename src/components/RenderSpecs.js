@@ -65,20 +65,34 @@ function RenderSpecs({ URL, id, title1, title2, category }) {
         setData1(request.data.ram_specs_props_allmants);
         setData2(request.data.ram_specs_props_minnes);
       }
+
+      if (category === "Hårddisk") {
+        setData1(request.data.harddrive_specs_props_allmants);
+        setData2(request.data.harddrive_specs_props_prestandas);
+      }
+
+      if (category === "Datorchassi") {
+        setData1(request.data.chassi_specs_props_allmants);
+        setData2(request.data.chassi_specs_props_anslutnings);
+      }
+
+      if (category === "Kylning") {
+        setData1(request.data.cpu_cooling_specs_props_allmants);
+        setData2(request.data.cpu_cooling_specs_props_heats);
+      }
     }
 
     fetchData();
   }, [category]);
 
-  console.log(data1);
-  console.log(data2);
-
   return (
-    <TableContainer component={Paper} style={{ marginBottom: "50px" }}>
+    <TableContainer component={Paper} style={{ margin: "50px 0" }}>
       <Table className={classes.table} aria-label="customized table">
         <TableHead className={classes.width}>
           <TableRow>
-            <StyledTableCell>{title1}</StyledTableCell>
+            <StyledTableCell style={{ fontSize: "16px", fontWeight: "bold" }}>
+              {title1}
+            </StyledTableCell>
             <StyledTableCell></StyledTableCell>
           </TableRow>
         </TableHead>
@@ -98,7 +112,9 @@ function RenderSpecs({ URL, id, title1, title2, category }) {
 
         <TableHead className={classes.width}>
           <TableRow>
-            <StyledTableCell>{title2}</StyledTableCell>
+            <StyledTableCell style={{ fontSize: "16px", fontWeight: "bold" }}>
+              {title2}
+            </StyledTableCell>
             <StyledTableCell></StyledTableCell>
           </TableRow>
         </TableHead>

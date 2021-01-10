@@ -6,7 +6,6 @@ export default makeStyles((theme) => ({
     flexGrow: 1,
     backgroundColor: theme.palette.background.default,
     padding: theme.spacing(2),
-    // border: "1px solid red",
     display: "flex",
     justifyContent: "center",
   },
@@ -17,7 +16,6 @@ export default makeStyles((theme) => ({
 
   card: {
     maxWidth: 345,
-    border: " 1px solid green",
     display: "flex",
     flexDirection: "column",
     justifyContent: "space-between",

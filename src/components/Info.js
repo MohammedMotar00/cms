@@ -18,7 +18,6 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 function Info({
-  name,
   desc1,
   desc2,
   desc3,
@@ -27,14 +26,11 @@ function Info({
   description2,
   description3,
   category,
-  slug,
-  id,
   data,
 }) {
   const classes = useStyles();
   const [infoType, setInfoType] = useState("description");
   const [open, setOpen] = useState(false);
-  console.log(slug);
 
   const handleChange = (event) => {
     setInfoType(event.target.value);
@@ -51,7 +47,6 @@ function Info({
   return (
     <Container
       style={{
-        // border: "1px solid green",
         display: "flex",
         flexDirection: "column",
         flexWrap: "wrap",
@@ -64,7 +59,6 @@ function Info({
           display: "flex",
           flexDirection: "column",
           alignItems: "center",
-          // border: "1px solid",
         }}
       >
         <FormControl className={classes.formControl}>

@@ -64,6 +64,9 @@
     },
     "prop3": {
       "type": "string"
+    },
+    "cpu_cooling_spec": {
+      "model": "cpu-cooling-specs"
     }
   }
 }

@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 
 import Card from "@material-ui/core/Card";
 import CardActionArea from "@material-ui/core/CardActionArea";
@@ -17,23 +17,7 @@ import styling from "./styling";
 
 const URL = "http://localhost:1337";
 
-function PcComponent({
-  name,
-  category,
-  slug,
-  image,
-  description,
-  description1,
-  description2,
-  description3,
-  desc1,
-  desc2,
-  desc3,
-  prop1,
-  prop2,
-  prop3,
-  id,
-}) {
+function PcComponent({ name, category, slug, image, prop1, prop2, prop3, id }) {
   const classes = styling();
   const smallImg = image[0]?.formats?.small?.url;
   const thumbnail = image[0]?.formats?.thumbnail?.url;
@@ -90,7 +74,6 @@ function PcComponent({
                   display: "flex",
                   flexDirection: "column",
                   alignItems: "flex-start",
-                  border: "1px solid blue",
                   flex: 1,
                 }}
               >
@@ -120,11 +103,11 @@ function PcComponent({
 
       <CardActions
         style={{
-          border: "1px solid red",
+          backgroundColor: "Gainsboro",
+          border: "1px solid rgba(0, 0, 0, 0.40)",
         }}
       >
         <Button size="large" color="primary" style={{ flex: 1 }}>
-          {/* <Link to="/component" params={{  }}>Läs mer...</Link> */}
           <Link
             style={{ textDecoration: "none", color: "black" }}
             to={{

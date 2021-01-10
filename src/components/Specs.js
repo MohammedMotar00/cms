@@ -2,11 +2,7 @@ import React from "react";
 import RenderSpecs from "./RenderSpecs";
 
 function Specs({ data, category }) {
-  console.log(data);
-  console.log(category);
-
   let id, URL, title1, title2;
-  // let URL;
   title1 = "Allmänt";
 
   if (category === "Grafikkort") {
@@ -30,11 +26,26 @@ function Specs({ data, category }) {
     title2 = "Minne";
   }
 
-  console.log(URL);
-  console.log(id);
+  if (category === "Hårddisk") {
+    id = data.harddrive_spec.id;
+    URL = "http://localhost:1337/harddrive-specs/";
+    title2 = "Prestanda";
+  }
+
+  if (category === "Datorchassi") {
+    id = data.chassi_spec.id;
+    URL = "http://localhost:1337/chassi-specs/";
+    title2 = "Expansion/Anslutning";
+  }
+
+  if (category === "Kylning") {
+    id = data.cpu_cooling_spec.id;
+    URL = "http://localhost:1337/cpu-cooling-specs/";
+    title2 = "Kylfläns och fläkt";
+  }
 
   return (
-    <>
+    <div>
       <RenderSpecs
         URL={URL}
         id={id}
@@ -42,7 +53,7 @@ function Specs({ data, category }) {
         title2={title2}
         category={category}
       />
-    </>
+    </div>
   );
 }
 

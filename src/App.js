@@ -9,10 +9,6 @@ function App() {
       <Router>
         <Route exact path="/" component={Main} />
         <Route path="/component/:category" component={ComponentPage} />
-        {/* <Route
-          path="/component"
-          render={(props) => <ComponentPage id={props.match.params.id} />}
-        /> */}
       </Router>
     </div>
   );
