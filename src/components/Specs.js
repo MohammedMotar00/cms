@@ -44,6 +44,12 @@ function Specs({ data, category }) {
     title2 = "Kylfläns och fläkt";
   }
 
+  if (category === "Moderskort") {
+    id = data.motherboard_spec.id;
+    URL = "http://localhost:1337/motherboard-specs/";
+    title2 = "RAM som stöds";
+  }
+
   return (
     <div>
       <RenderSpecs

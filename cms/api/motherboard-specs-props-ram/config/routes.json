@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/motherboard-specs-props-rams",
+      "handler": "motherboard-specs-props-ram.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/motherboard-specs-props-rams/count",
+      "handler": "motherboard-specs-props-ram.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/motherboard-specs-props-rams/:id",
+      "handler": "motherboard-specs-props-ram.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/motherboard-specs-props-rams",
+      "handler": "motherboard-specs-props-ram.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/motherboard-specs-props-rams/:id",
+      "handler": "motherboard-specs-props-ram.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/motherboard-specs-props-rams/:id",
+      "handler": "motherboard-specs-props-ram.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

@@ -1,0 +1,24 @@
+{
+  "kind": "collectionType",
+  "collectionName": "motherboard_specs_props_rams",
+  "info": {
+    "name": "Motherboard-specs-props-ram"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "type": {
+      "type": "string"
+    },
+    "value": {
+      "type": "string"
+    },
+    "motherboard_specs": {
+      "via": "motherboard_specs_props_rams",
+      "collection": "motherboard-specs"
+    }
+  }
+}

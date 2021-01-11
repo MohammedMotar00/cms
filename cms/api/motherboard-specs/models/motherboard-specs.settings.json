@@ -1,0 +1,28 @@
+{
+  "kind": "collectionType",
+  "collectionName": "motherboard_specs",
+  "info": {
+    "name": "motherboard-specs",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "motherboard_specs_props_allmants": {
+      "collection": "motherboard-specs-props-allmant",
+      "via": "motherboard_specs",
+      "dominant": true
+    },
+    "motherboard_specs_props_rams": {
+      "collection": "motherboard-specs-props-ram",
+      "via": "motherboard_specs",
+      "dominant": true
+    }
+  }
+}

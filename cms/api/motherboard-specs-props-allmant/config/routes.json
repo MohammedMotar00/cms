@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/motherboard-specs-props-allmants",
+      "handler": "motherboard-specs-props-allmant.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/motherboard-specs-props-allmants/count",
+      "handler": "motherboard-specs-props-allmant.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/motherboard-specs-props-allmants/:id",
+      "handler": "motherboard-specs-props-allmant.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/motherboard-specs-props-allmants",
+      "handler": "motherboard-specs-props-allmant.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/motherboard-specs-props-allmants/:id",
+      "handler": "motherboard-specs-props-allmant.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/motherboard-specs-props-allmants/:id",
+      "handler": "motherboard-specs-props-allmant.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

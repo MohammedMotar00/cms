@@ -80,6 +80,11 @@ function RenderSpecs({ URL, id, title1, title2, category }) {
         setData1(request.data.cpu_cooling_specs_props_allmants);
         setData2(request.data.cpu_cooling_specs_props_heats);
       }
+
+      if (category === "Moderskort") {
+        setData1(request.data.motherboard_specs_props_allmants);
+        setData2(request.data.motherboard_specs_props_rams);
+      }
     }
 
     fetchData();

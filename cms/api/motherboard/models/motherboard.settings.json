@@ -64,6 +64,9 @@
     },
     "prop3": {
       "type": "string"
+    },
+    "motherboard_spec": {
+      "model": "motherboard-specs"
     }
   }
 }
